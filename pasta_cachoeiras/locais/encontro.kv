@@ -1,0 +1,24 @@
+<Encontro>:
+    Add_bar:
+        padding: 0
+        canvas.before:
+            Color:
+                rgba:(140,212,64,1)
+            Rectangle:
+                pos: root.pos
+                size: root.size
+        Descricao_Layout:
+            ScrollView:
+                Descricao_Gridlayout:
+                    Descricao_image_label:
+                        Image: 
+                            id: imagem_descricao
+                            allow_strech: True
+                            keep_ratio: False
+                    Descricao_image_label:
+                        Label:
+                            color: (0,0,0,1)
+                            font_size:25
+                            text_size: self.width*0.9, self.height
+                            center: root.width/2,root.height/2
+                            id: texto_descricao

@@ -1,0 +1,38 @@
+<TelaCachoeiras>:
+    name: 'telacachoeiras'
+    Add_bar:
+        BoxLayout:
+            canvas.before:
+                Color:
+                    rgba:(140,212,64,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size    
+            ScrollView: 
+                GridLayout:
+                    size_hint_y: 0.9
+                    size: root.width*0.8,root.height*0.8
+                    cols:1
+                    padding: 0,40,0,0
+                    id: box
+                    row_default_height: 200
+                    row_force_default: True
+                    center: root.width/2,root.height/2
+                    
+<GetCachoeira>:
+    cols:1
+    padding: 30, 0
+    spacing: 50
+    GridLayout:
+        cols:1
+        Botoes_Fotos:
+            id:botoes_fotos
+            on_release: root.get_descricao()
+        Label:
+            color: (0,0,0,1)
+            id:label
+            font_size:30
+            size_hint_y: None
+
+
+<Botoes_Fotos@Button>:

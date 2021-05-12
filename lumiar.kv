@@ -1,0 +1,48 @@
+#: import Menu menu.Menu
+#: import Cachoeiras pasta_cachoeiras.telacachoeiras.TelaCachoeiras
+#: include menu.kv
+#: include pasta_cachoeiras/telacachoeiras.kv
+#: include pasta_cachoeiras/lista_cachoeiras.kv
+<Gerenciador>: # representa o módulo Gerenciador() no arquivo kv
+    Menu:
+        name: 'menu'
+    TelaCachoeiras:
+        name: 'telacachoeiras'
+    Mercados:
+        name: 'mercados'
+    PocoBelo:
+        name: 'pocobelo'
+    Indiana:
+        name: 'indiana'
+    Encontro:
+        name: 'encontro'
+
+<Descricao_Layout@BoxLayout>:
+
+<Mercados>:
+    Add_bar:
+        Botoes_Fotos:
+            id:botoes_fotos
+
+<Add_bar@BoxLayout>
+    orientation: 'vertical'
+    ActionBar:
+        ActionView:
+            ActionPrevious:
+                title: 'voltar'
+                on_release: app.root.current = 'menu'
+            ActionButton:
+                text: 'sair'
+                on_release: app.stop()
+
+<Descricao_image_label@BoxLayout>:
+<Descricao_Gridlayout@GridLayout>:
+    size_hint_y: 0.9
+    padding: 40,40,40,0
+    cols:1
+    spacing: 30
+    row_default_height: 300
+    row_force_default: True
+
+    
+
